@@ -1,0 +1,35 @@
+	<div ng-include="'views/include/header.html'"></div>
+
+	<div id="container">
+		<div id="content" class="log_in">
+			<div class="title">
+				<h2 id="title"><span translate>Title</span></h2>
+			</div>
+
+			<section class="content">
+				<ng-form name="login_form" ng-controller="LoginCtrl as vm" ng-init="init(this)">
+					<div class="input_data">
+						<ul>
+							<li>
+								<input  type="text" id="email" name='username' ng-model='username' maxlength=50 placeholder="{{'signin.email'|translate}}">
+							</li>
+							<li>
+								<input type="password" on-key-enter="login()" id="pw" name='password' ng-model='password' maxlength=20 placeholder="{{'signin.password'|translate}}" >
+							</li>
+						</ul>
+					</div>
+
+					<div class="input_btn" >
+						<input type="checkbox" name="_spring_security_remember_me" id="_spring_security_remember_me" ng-model='rememberMe' class="radiobox" tabindex="0">
+						<label for="_spring_security_remember_me">
+							<span class="remember_pw" ><span translate>Remember me</span></span>
+						</label>
+						<button ng-click="login()" id="login" tabindex="0"><span translate>Log-in</span></button>
+
+				</ng-form>
+
+			</section>
+		</div><!-- //content log_in-->
+	</div>
+
+	<div ng-include="'views/include/footer.html'"></div>
