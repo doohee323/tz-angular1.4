@@ -1,14 +1,15 @@
 <header>
-	<ng-form name="headerFrm" ng-controller="HeaderCtrl" ng-init="init(this)">
-	<div class="header_wrap">
-	</div>
-	
-		<ul>
-			<a ng-click="changeLocale('en_US')">ENGLISH</a> / <a ng-click="changeLocale('ko_KR')">한국어</a>
-			<li ng-if="authenticated == true">
-				<button type="button" class="btn-primary btn-sm" ng-click="logout();">signout</button>
-			</li>
-		</ul>	
-	
+	<ng-form name="headerFrm" ng-controller="HeaderCtrl"
+		ng-init="init(this)">
+	<div class="header_wrap"></div>
+
+	<ul>
+		<a ng-click="changeLocale('en_US')">ENGLISH</a> /
+		<a ng-click="changeLocale('ko_KR')">한국어</a>
+		<li ng-if="authenticated == true">
+			<button type="button" class="btn-primary btn-sm" ng-click="logout();"><span translate>Sign out</span></button>
+		</li>
+	</ul>
+
 	</ng-form>
 </header>

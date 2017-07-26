@@ -1,8 +1,32 @@
-	<div ng-include="'views/include/header.html'"></div>
-	<ng-form name="MyPageCtrl" ng-init="init(this)">
-		<input type="text" id="username" ng-model="user.username" />
-	</ng-form>
+
+<div ng-include="'views/include/header.html'"></div>
+
+	<div class="container">
+		<div class="row">
+	        <div class="col-md-4">-</div>
+	        <div class="col-md-4">
+	            <div class="login panel panel-default">
+	                <h1 class="text-center page-header">
+	                    Dev Tz Dev
+	                </h1>
+	                <div class="row text-center">
+	                    <div class="col-xs-12">
+	                        <h4><span translate>Logged</span>...</h4>
+	                    </div>
+	                    <div class="col-xs-10 col-xs-offset-1">
+	                        
+	                    </div>
+	                </div>
+	                <ng-form name="MyPageCtrl" ng-init="init(this)">
+	                    <div class="form-group error-handler">
+	                        <label for="username" class="control-label"><span translate>Username</span></label>
+	                        <input type="text" id="username" ng-model="user.username" class="form-control" />
+	                    </div>
+	                </ng-form>
+	            </div>
+	        </div>
+	        <div class="col-md-4">-</div>
+        </div>
+	</div>
 
 	<div ng-include="'views/include/footer.html'"></div>
-
-

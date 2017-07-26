@@ -21,7 +21,6 @@ angular.module('TzUI').controller(
 				function($rootScope, $scope, $http, $timeout, $location, StorageCtrl, CommcdCtrl, SessionService, Session,
 						gettextCatalog) {
 
-					debugger;
 					$scope.user = SessionService.getSession();
 
 					$scope.init = function(scope) {

@@ -24,8 +24,7 @@ angular.module(
 	$httpProvider.interceptors.push('interceptors');
 
 	$routeProvider.when('/', {
-		templateUrl : 'views/home.html',
-		controller : 'HomeCtrl',
+		redirectTo : 'login'
 	}).when('/login', {
 		templateUrl : 'views/login.html',
 		controller : 'LoginCtrl',
@@ -35,7 +34,7 @@ angular.module(
 		controller : 'MyPageCtrl',
 		controllerAs : 'mypage'
 	}).otherwise({
-		redirectTo : '/page/mypage'
+		redirectTo : 'login'
 	});
 
 }).run(

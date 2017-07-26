@@ -21,11 +21,11 @@ angular.module('TzUI').controller(
 						gettextCatalog) {
 
 					$scope.init = function(scope) {
-
+						$scope.username = 'doogee323@gmail.com';
+						$scope.password = '971097';
 					}
 
 					$scope.login = function() {
-						debugger;
 						var regExp = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
 
 						if ($scope.username == undefined || $scope.username.trim() == '') {

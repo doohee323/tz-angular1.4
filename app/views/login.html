@@ -1,35 +1,41 @@
 	<div ng-include="'views/include/header.html'"></div>
 
-	<div id="container">
-		<div id="content" class="log_in">
-			<div class="title">
-				<h2 id="title"><span translate>Title</span></h2>
-			</div>
-
-			<section class="content">
-				<ng-form name="login_form" ng-controller="LoginCtrl as vm" ng-init="init(this)">
-					<div class="input_data">
-						<ul>
-							<li>
-								<input  type="text" id="email" name='username' ng-model='username' maxlength=50 placeholder="{{'signin.email'|translate}}">
-							</li>
-							<li>
-								<input type="password" on-key-enter="login()" id="pw" name='password' ng-model='password' maxlength=20 placeholder="{{'signin.password'|translate}}" >
-							</li>
-						</ul>
-					</div>
-
-					<div class="input_btn" >
-						<input type="checkbox" name="_spring_security_remember_me" id="_spring_security_remember_me" ng-model='rememberMe' class="radiobox" tabindex="0">
-						<label for="_spring_security_remember_me">
-							<span class="remember_pw" ><span translate>Remember me</span></span>
-						</label>
-						<button ng-click="login()" id="login" tabindex="0"><span translate>Log-in</span></button>
-
-				</ng-form>
-
-			</section>
-		</div><!-- //content log_in-->
+	<div class="container">
+		<div class="row">
+	        <div class="col-md-4">-</div>
+	        <div class="col-md-4">
+	            <div class="login panel panel-default">
+	                <h1 class="text-center page-header">
+	                    Dev Tz Dev
+	                </h1>
+	                <div class="row text-center">
+	                    <div class="col-xs-12">
+	                        <h4><span translate>Please Log In</span>...</h4>
+	                    </div>
+	                    <div class="col-xs-10 col-xs-offset-1">
+	                        
+	                    </div>
+	                </div>
+	                <ng-form name="login_form" ng-controller="LoginCtrl as vm" ng-init="init(this)">
+	                    <div class="form-group error-handler">
+	                        <label for="username" class="control-label"><span translate>Username</span></label>
+	                        <input id="email" name='username' ng-model='username' maxlength=50 class="form-control" placeholder="{{'signin.email'|translate}}">
+	                    </div>
+	                    <div class="form-group">
+	                        <label for="password"><span translate>Password</span></label>
+	                        <input type="password" on-key-enter="login()" id="pw" name='password' ng-model='password' maxlength=20 class="form-control" placeholder="{{'signin.password'|translate}}" >
+	                    </div>
+	                    <div class="form-group">
+	                        <input type="checkbox" name="_spring_security_remember_me" id="_spring_security_remember_me" ng-model='rememberMe' class="form-control" tabindex="0">
+	                    </div>
+	                    <button type="submit" class="btn btn-lg btn-success btn-block" ng-click="login()" id="login" tabindex="0">
+	                        <span translate>Log-in</span>
+	                    </button>
+	                </ng-form>
+	            </div>
+	        </div>
+	        <div class="col-md-4">-</div>
+        </div>
 	</div>
-
+	
 	<div ng-include="'views/include/footer.html'"></div>
