@@ -24,7 +24,14 @@ angular.module('TzUI').controller(
 					$scope.user = SessionService.getSession();
 
 					$scope.init = function(scope) {
-						$scope.username = $scope.user.id;
+						$http({
+							method : 'GET',
+							url : config.domain + 'home'
+						}).then(function successCallback(response) {
+							$scope.viewerCountry = response.data.viewerCountry;
+						}, function errorCallback(response) {
+							swal('', gettextCatalog.getString('mypage.error.get.country'));
+						});
 					}
 
 				} ]);
